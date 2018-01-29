@@ -1,6 +1,7 @@
 package com.github.testcommon.test.base.page.element;
 
 import java.lang.reflect.Field;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
