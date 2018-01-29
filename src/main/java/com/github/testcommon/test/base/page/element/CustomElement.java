@@ -101,6 +101,7 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 		
 		try
 		{
+			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 			new WebDriverWait(driver, timeInSeconds).until(ExpectedConditions.visibilityOf(this.get()));
 
 			return true;
@@ -108,6 +109,10 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 		catch(Exception e)
 		{
 			return false;
+		}
+		finally
+		{
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
 	}
 
@@ -124,6 +129,7 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 		
 		try
 		{
+			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 			new WebDriverWait(driver, timeInSeconds).until(ExpectedConditions.invisibilityOf(this.get()));
 
 			return true;
@@ -131,6 +137,10 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 		catch(Exception e)
 		{
 			return false;
+		}
+		finally
+		{
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
 	}
 }
