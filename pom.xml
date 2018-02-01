@@ -15,10 +15,6 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
-	<modules>
-		<module>MobileTestFramework</module>
-	</modules>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.github.rayzhouzhj</groupId>
