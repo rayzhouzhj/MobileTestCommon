@@ -144,4 +144,19 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
 	}
+	
+	public void clear()
+	{
+		this.get().clear();
+	}
+	
+	public void setValue(String text)
+	{
+		this.get().setValue(text);
+	}
+	
+	public void click()
+	{
+		this.get().click();
+	}
 }
