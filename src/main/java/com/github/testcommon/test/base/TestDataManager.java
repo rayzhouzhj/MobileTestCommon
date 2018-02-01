@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.github.framework.context.TestingDevice;
 import com.github.testcommon.test.base.data.UserData;
 import com.github.testcommon.test.base.data.Users;
 import com.github.testcommon.test.utils.ResourceReader;
@@ -29,6 +30,26 @@ public class TestDataManager
 		System.out.println("[INFO] Test Data Initialization successfully.");
 	}
 
+	public static synchronized UserData getUserData()
+	{
+		String device = TestingDevice.getDeviceUDID();
+		
+		if(!deviceDataMap.keySet().contains(device))
+		{
+			if(index.get() == userDataList.size())
+			{
+				System.err.println("No enough user data for testing.");
+				throw new IllegalArgumentException("No enough user data for testing.");
+			}
+
+			deviceDataMap.put(device, userDataList.get(index.get()));
+
+			index.getAndIncrement();
+		}
+
+		return deviceDataMap.get(device);
+	}
+	
 	public static synchronized UserData getUserData(String device)
 	{
 		if(!deviceDataMap.keySet().contains(device))
