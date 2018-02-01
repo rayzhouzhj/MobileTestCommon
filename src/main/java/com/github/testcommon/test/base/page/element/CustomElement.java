@@ -90,7 +90,7 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 	}
 	
 	@Override
-	public boolean waitForVisibility() 
+	public boolean waitForVisible() 
 	{
 		return waitForVisibility(5);
 	}
@@ -158,5 +158,10 @@ public abstract class CustomElement extends AbstractElement implements IElementA
 	public void click()
 	{
 		this.get().click();
+	}
+	
+	public String getText()
+	{
+		return this.get().getText();
 	}
 }
