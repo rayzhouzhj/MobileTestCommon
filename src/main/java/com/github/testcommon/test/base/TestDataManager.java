@@ -6,12 +6,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.github.framework.context.TestingDevice;
 import com.github.testcommon.test.base.data.UserData;
 import com.github.testcommon.test.base.data.Users;
 import com.github.testcommon.test.utils.ResourceReader;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.rayzhou.framework.context.TestingDevice;
 
 public class TestDataManager 
 {

@@ -2,7 +2,7 @@ package com.github.testcommon.test.base;
 
 import org.testng.Assert;
 
-import com.github.framework.report.ReportManager;
+import com.rayzhou.framework.report.ReportManager;
 
 public class TestLogger 
 {

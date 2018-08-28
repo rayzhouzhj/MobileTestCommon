@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 
 import org.openqa.selenium.By;
 
-import com.github.framework.context.RunTimeContext;
+import com.rayzhou.framework.context.RunTimeContext;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;

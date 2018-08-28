@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.github.framework.context.TestingDevice;
+import com.rayzhou.framework.context.TestingDevice;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;

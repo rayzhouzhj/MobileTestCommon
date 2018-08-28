@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.support.PageFactory;
 
-import com.github.framework.context.TestingDevice;
+import com.rayzhou.framework.context.TestingDevice;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
